@@ -26,6 +26,7 @@ var sliderProps = {
   touchDimensions: PropTypes.object,
 
   customMarker: PropTypes.func,
+  customProps: PropTypes.object,  
 
   min: PropTypes.number,
   max: PropTypes.number,
@@ -232,6 +233,7 @@ var Slider = React.createClass({
                 pressed={this.state.onePressed}
                 markerStyle={this.props.markerStyle}
                 pressedMarkerStyle={this.props.pressedMarkerStyle}
+                customProps = {this.props.customProps}
               />
             </View>
           </View>
@@ -247,6 +249,7 @@ var Slider = React.createClass({
                     pressed={this.state.twoPressed}
                     markerStyle={this.props.markerStyle}
                     pressedMarkerStyle={this.props.pressedMarkerStyle}
+                    customProps = {this.props.customProps}
                   />
                 </View>
               )}
